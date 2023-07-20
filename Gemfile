@@ -64,3 +64,10 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'launchy'
+  gem 'orderly'
+  gem 'shoulda-matchers'
+end
+
