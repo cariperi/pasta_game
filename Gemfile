@@ -69,5 +69,6 @@ group :test do
   gem 'launchy'
   gem 'orderly'
   gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
