@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require 'csv'
+
+CSV.foreach(Rails.root.join('lib/data/pasta.csv'), headers: true) do |row|
+  Pasta.create({name: row[0], description: row[1]})
+end
