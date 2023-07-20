@@ -1,0 +1,19 @@
+<h1>The results are in...</h1>
+
+<div class="btn-div">
+  <p>
+    <%= @message %>
+  </p>
+</div>
+
+<div class="btn-div">
+  <%= link_to "Take a(nother) Guess!", new_guess_path, class: "btn-guess" %>
+</div>
+
+<div class="btn-div">
+  <%= link_to "What does this do?", random_path, class: "btn-random" %>
+</div>
+
+<div class="btn-div">
+  <%= link_to "Nevermind! Take me home.", root_path, class: "btn-home" %>
+</div>

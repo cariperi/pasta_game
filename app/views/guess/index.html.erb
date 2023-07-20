@@ -1,3 +1,21 @@
+<h1>Which pasta is this?</h1>
+
+<div class='question'>
+  <p><%= @right.description %></p>
+</div>
+
 <div>
-  <%= link_to "Nevermind! Take me home.", root_path %>
+  <h2>Your Menu:</h2>
+
+  <%= form_with url: "/answer", method: :get do |f| %>
+    <% @answers.each do |answer| %>
+      <%= f.radio_button :name, answer %> <%= answer %><br />
+    <% end %>
+    <%= f.hidden_field :answer, value: @right.name %><br>
+    <%= f.submit "🍝" %>
+  <% end %>
+</div><br>
+
+<div class='btn-div'>
+  <%= link_to "Nevermind! Take me home.", root_path, class: "btn-home" %>
 </div>
