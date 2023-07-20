@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   get '/guess', to: 'guess#index', as: 'new_guess'
 
+  get '/answer', to: 'answer#index', as: 'answer'
 end
